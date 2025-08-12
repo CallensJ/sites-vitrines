@@ -3,55 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+  
     <title>soficraft</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <span class="logo">Soficraft</span>
-        <!-- nav links-->
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a class="navbar__link" href="home">Accueil</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="about">A propos</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="gallery">Gallerie</a>
-          </li>
-          <li class="navbar__item">
-            <a href="contact">Contact</a>
-          </li>
-        </ul>
+<header>
+  <nav class="navbar">
+    <span class="logo">Soficraft</span>
 
-        <!-- social icons-->
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a class="navbar__link"
-              ><ion-icon name="logo-facebook"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link"
-              ><ion-icon name="logo-instagram"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link"
-              ><ion-icon name="logo-pinterest"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link"
-              ><ion-icon name="logo-whatsapp"></ion-icon
-            ></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <!-- menu icons -->
+    <div class="menu-toggle">
+      <ion-icon class="menu" name="menu"></ion-icon>
+      <ion-icon class="close" name="close"></ion-icon>
+    </div>
 
+    <!-- nav links -->
+    <ul class="navbar__list navbar__list-primary">
+      <li><a href="home">Accueil</a></li>
+      <li><a href="about">A propos</a></li>
+      <li><a href="gallery">Gallerie</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+
+    <!-- social icons -->
+    <ul class="navbar__list navbar__list-secondary">
+      <li><a><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a><ion-icon name="logo-pinterest"></ion-icon></a></li>
+      <li><a><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+    </ul>
+  </nav>
+</header>
+  <script src="script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

@@ -18,16 +18,6 @@ html {
 body {
   background-color: var(--nuit);
 }
-body::before {
-  content: "CSS VERSION 2";
-  color: red;
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-size: 2rem;
-  background: yellow;
-  z-index: 9999;
-}
 
 .btn {
   font-family: "Cormorant Garamond", serif;
@@ -41,6 +31,10 @@ body::before {
 }
 a {
   text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.6rem;
+  color: var(--ivoire);
+  font-weight: 500;
 }
 li {
   list-style-type: none;
@@ -66,21 +60,103 @@ li {
 -------------------------------- */
 
 header {
-  height: 10rem;
   border: 1px solid white;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  height: 100%;
+  width: 100%;
 }
-.navbar__list {
-  border: 1px solid red;
+
+/* Logo */
+.navbar .logo {
+  font-family: "CINZEL", serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--argent);
+}
+
+/* Hamburger */
+.navbar .menu-toggle {
+  color: var(--ivoire);
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.menu-toggle .close {
+  display: none;
+}
+
+/* Liens du menu (cachés par défaut) */
+.navbar__list-primary {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Icônes sociales — toujours visibles */
+.navbar__list-secondary {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+
+
+}
+.navbar__list-secondary li a {
+  font-size: 2.6rem;
+
+}
+/* Quand menu actif */
+.navbar.active .navbar__list-primary {
+  display: flex;
+}
+@media only screen and (min-width: 600px) {
+  header {
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo à gauche */
+  .navbar .logo {
+    flex: 1;
+  }
+
+  /* Menu centré */
+  .navbar__list-primary {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: row;
+    border: 1px solid red;
+  }
+
+  /* Icônes à droite */
+  .navbar__list-secondary {
+    flex: 1;
+    justify-content: flex-end; 
+    margin-top: 0;
+    border: 1px solid red;
+  }
+
+  /* On cache le hamburger en desktop */
+  .menu-toggle {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
