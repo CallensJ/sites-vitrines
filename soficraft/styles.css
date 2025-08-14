@@ -196,46 +196,69 @@ HERO SECTION */
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 2rem;
-  margin-top: 4rem;
+
+  margin-top: 8rem;
 }
 
 .about .container:first-child {
   color: var(--ivoire);
   font-size: 2.6rem;
-  text-align:center;
+  text-align: center;
 }
 .about .container:first-child .text {
   color: var(--ivoire);
   font-size: 2.6rem;
-  text-align:center;
+  text-align: center;
   margin: 2rem 0;
 }
 
-
-.about .container:last-child,.about .container:last-child image {
-height: 100%;
+.about .container:last-child,
+.about .container:last-child image {
+  height: 100%;
 }
-.about .about-image{
-  width:100%;
+.about .about-image {
+  width: 100%;
   object-fit: cover;
 }
 /* SECTION INTERSECTION */
 
-.intersection{
-  background-color:var(--vert-mousse);
-  margin-top:10rem;
-  text-align:center;
+.intersection {
+  background-color: var(--vert-mousse);
+  margin-top: 10rem;
+  text-align: center;
 }
-.intersection h2{
+.intersection h2 {
   padding-top: 6rem;
   color: var(--ivoire);
 }
-.intersection .text{
+.intersection .text {
   font-size: 2.6rem;
   color: var(--ivoire);
   padding-bottom: 6rem;
 }
+
+/* GALLERIE SECTION */
+.gallery {
+  margin-top: 10rem;
+  text-align: center;
+}
+.gallerie {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallerie img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
 
 @media only screen and (min-width: 1024px) {
   header {
@@ -297,7 +320,7 @@ height: 100%;
 
   .hero .hero-image {
     width: 100%;
-    height: 100%;       /* maintenant ça fonctionne */
+    height: 100%; /* maintenant ça fonctionne */
     object-fit: cover;
     display: block;
   }
@@ -331,9 +354,19 @@ height: 100%;
     object-fit: cover;
   }
   /* ABOUT SECTION */
-  .about .grid{
+  .about .grid {
     display: grid;
     grid-template-columns: 40% 60%;
-    align-items: stretch; 
+    align-items: stretch;
+  }
+
+  /* GALLERIE MOBILE SECTION */
+
+    .gallerie {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallerie img {
+    height: 250px;
   }
 }

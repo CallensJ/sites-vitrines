@@ -1,0 +1,10 @@
+[
+  { "src": "./assets/img1.jpg", "alt": "Collier en argent" },
+  { "src": "./assets/img2.jpg", "alt": "Bague en argent et pierre" },
+  { "src": "./assets/img3.jpg", "alt": "Pendentif runique" },
+  { "src": "./assets/img4.jpg", "alt": "Bracelet martelé" },
+  { "src": "./assets/img5.jpg", "alt": "Boucles d'oreilles artisanales" },
+  { "src": "./assets/img6.jpg", "alt": "Bague viking" },
+  { "src": "./assets/img7.jpeg", "alt": "Collier pierre précieuse" },
+  { "src": "./assets/img8.jpeg", "alt": "Pendentif en bronze" }
+]
