@@ -18,6 +18,17 @@ html {
 body {
   background-color: var(--nuit);
 }
+section,
+nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
 .btn {
   font-family: "Cormorant Garamond", serif;
@@ -39,6 +50,10 @@ a {
 li {
   list-style-type: none;
 }
+p {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 4rem;
+}
 
 .btn-full {
   margin-top: 6rem;
@@ -53,13 +68,28 @@ li {
   margin-bottom: 5rem;
 }
 
-/* 
-
+.title-1 {
+  font-family: "CINZEL";
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+.title-2 {
+  font-family: "CINZEL";
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+.title-4 {
+  font-family: "CINZEL";
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--gold);
+}
 --------------------------------
-          header
--------------------------------- */
-
-header {
+  header
+  --------------------------------
+  header {
   border: 1px solid white;
   display: flex;
   align-items: flex-start;
@@ -105,26 +135,117 @@ header {
   justify-content: center;
   gap: 3rem;
   margin-top: 1rem;
-
-
 }
 .navbar__list-secondary li a {
   font-size: 2.6rem;
-
+  color: var(--gold);
 }
 /* Quand menu actif */
 .navbar.active .navbar__list-primary {
   display: flex;
 }
-@media only screen and (min-width: 600px) {
+
+/* 
+HERO SECTION */
+
+.hero .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.hero .hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texte et paragraphe */
+
+.hero .text {
+  color: var(--ivoire);
+  font-size: 2.6rem;
+}
+
+/* Aside images en mobile */
+.hero aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero aside .image {
+  text-align: center;
+}
+
+.hero aside img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ABOUT SECTION */
+.about {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.about .container:first-child {
+  color: var(--ivoire);
+  font-size: 2.6rem;
+  text-align:center;
+}
+.about .container:first-child .text {
+  color: var(--ivoire);
+  font-size: 2.6rem;
+  text-align:center;
+  margin: 2rem 0;
+}
+
+
+.about .container:last-child,.about .container:last-child image {
+height: 100%;
+}
+.about .about-image{
+  width:100%;
+  object-fit: cover;
+}
+/* SECTION INTERSECTION */
+
+.intersection{
+  background-color:var(--vert-mousse);
+  margin-top:10rem;
+  text-align:center;
+}
+.intersection h2{
+  padding-top: 6rem;
+  color: var(--ivoire);
+}
+.intersection .text{
+  font-size: 2.6rem;
+  color: var(--ivoire);
+  padding-bottom: 6rem;
+}
+
+@media only screen and (min-width: 1024px) {
   header {
-    height: 10rem;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    border-bottom: 1px solid var(--ivoire);
   }
 
   .navbar {
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -142,25 +263,77 @@ header {
     justify-content: center;
     gap: 2rem;
     flex-direction: row;
-    border: 1px solid red;
   }
 
   /* Icônes à droite */
   .navbar__list-secondary {
     flex: 1;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     margin-top: 0;
-    border: 1px solid red;
   }
 
   /* On cache le hamburger en desktop */
   .menu-toggle {
     display: none;
   }
-}
+  /* HERO DESKTOP SECTION */
+  .hero .grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: stretch; /* Les colonnes s'alignent en hauteur */
+  }
 
-@media only screen and (max-width: 600px) {
-  html {
-    font-size: 50%;
+  /* Colonne image */
+  .hero .container:first-child {
+    order: 2;
+    position: relative;
+  }
+
+  /* Faire en sorte que le conteneur prenne 100% de la hauteur */
+  .hero .container:first-child,
+  .hero .container:first-child .image {
+    height: 100%;
+  }
+
+  .hero .hero-image {
+    width: 100%;
+    height: 100%;       /* maintenant ça fonctionne */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Colonne texte */
+  .hero .container:last-child {
+    order: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+  .hero .container:last-child .text-container {
+    width: 60%;
+  }
+
+  /* Aside horizontal */
+  .hero aside {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Taille fixe des images d'aside */
+  .hero aside img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+  }
+  /* ABOUT SECTION */
+  .about .grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: stretch; 
   }
 }

@@ -4,38 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css?v=3" />
-  
+
     <title>soficraft</title>
   </head>
   <body>
-<header>
-  <nav class="navbar">
-    <span class="logo">Soficraft</span>
+    <header>
+      <nav class="navbar">
+        <span class="logo">Soficraft</span>
 
-    <!-- menu icons -->
-    <div class="menu-toggle">
-      <ion-icon class="menu" name="menu"></ion-icon>
-      <ion-icon class="close" name="close"></ion-icon>
-    </div>
+        <!-- menu icons -->
+        <div class="menu-toggle">
+          <ion-icon class="menu" name="menu"></ion-icon>
+          <ion-icon class="close" name="close"></ion-icon>
+        </div>
 
-    <!-- nav links -->
-    <ul class="navbar__list navbar__list-primary">
-      <li><a href="home">Accueil</a></li>
-      <li><a href="about">A propos</a></li>
-      <li><a href="gallery">Gallerie</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
+        <!-- nav links -->
+        <ul class="navbar__list navbar__list-primary">
+          <li><a href="home">Accueil</a></li>
+          <li><a href="about">A propos</a></li>
+          <li><a href="gallery">Gallerie</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
 
-    <!-- social icons -->
-    <ul class="navbar__list navbar__list-secondary">
-      <li><a><ion-icon name="logo-facebook"></ion-icon></a></li>
-      <li><a><ion-icon name="logo-instagram"></ion-icon></a></li>
-      <li><a><ion-icon name="logo-pinterest"></ion-icon></a></li>
-      <li><a><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-    </ul>
-  </nav>
-</header>
-  <script src="script.js"></script>
+        <!-- social icons -->
+        <ul class="navbar__list navbar__list-secondary">
+          <li>
+            <a><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li>
+            <a><ion-icon name="logo-pinterest"></ion-icon></a>
+          </li>
+          <li>
+            <a><ion-icon name="logo-whatsapp"></ion-icon></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero" id="home">
+      <div class="grid">
+        <div class="container">
+          <div class="image">
+            <img
+              src="./assets/headerImg.webp"
+              alt="hero image"
+              class="hero-image"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="text-container">
+            <h1 class="title-1">Forger la magie, porter l'ancien monde</h1>
+            <p class="text">
+              Entre runes, acier et légendes, chaque bijou de SofiCraft raconte
+              l’écho d’un passé oublié. Créations uniques, sculptées à la main
+              pour les âmes épiques.
+            </p>
+          </div>
+          <aside>
+            <div class="image">
+              <img src="./assets/collier.jpg" />
+              <h4 class="title-4">Colliers</h4>
+            </div>
+            <div class="image">
+              <img src="./assets/pendentif.jpg" />
+              <h4 class="title-4">pendentifs</h4>
+            </div>
+            <div class="image">
+              <img src="./assets/bagues.jpg" />
+              <h4 class="title-4">Bagues</h4>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="grid">
+        <div class="container">
+          <h2 class="title-2">Qui suis-je?</h2>
+          <p class="text">
+            Je m’appelle Sophie, et depuis toujours, je vis entre deux mondes :
+            celui du réel… et celui des légendes. Avec SofiCraft, j’ai voulu
+            donner forme à cette frontière invisible — créer des bijoux qui
+            portent en eux la magie, la mémoire et l’imaginaire Je ne suis ni
+            orfèvre ni bijoutière académique — je suis une rêveuse qui forge
+            avec ses mains ce que son esprit imagine.
+          </p>
+          <p class="text">
+            À travers SofiCraft, je ne cherche pas seulement à décorer, mais à
+            raconter des histoires, à faire naître des émotions, à transmettre
+            un peu de cette magie que nous avons tous en nous, parfois oubliée.
+            Merci d’être ici. Que vous soyez rôdeur, druide, elfe ou simple
+            voyageur curieux : bienvenue dans mon atelier.
+          </p>
+        </div>
+        <div class="container">
+          <div class="image">
+            <img src="./assets/sophie.webp" class="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="intersection">
+      <h2 class="title-2">L'artisanat au service de l'imaginaire</h2>
+      <p class="text">
+        À l’atelier, chaque création est façonnée avec passion, patience et
+        amour du détail. Plus qu’un bijou, c’est une part d’imaginaire que vous
+        portez avec vous.
+      </p>
+    </section> 
+    <script src="script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
