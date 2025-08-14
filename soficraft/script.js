@@ -7,6 +7,9 @@ toggle.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const galleryContainer = document.querySelector(".gallerie");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
 
   fetch("./gallery.json")
     .then((response) => {
@@ -20,10 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = alt;
+        img.addEventListener("click", () => {
+          lightboxImg.src = src;
+          lightboxImg.alt = alt;
+          lightbox.style.display = "flex";
+        });
         galleryContainer.appendChild(img);
       });
     })
     .catch((error) => {
       console.error("Impossible de charger la galerie :", error);
     });
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
 });
