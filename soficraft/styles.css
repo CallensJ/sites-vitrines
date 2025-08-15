@@ -22,7 +22,6 @@ section,
 nav {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .grid {
@@ -302,12 +301,15 @@ HERO SECTION */
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: stretch; /* Les colonnes s'alignent en hauteur */
+
+    padding: 0;
   }
 
   /* Colonne image */
   .hero .container:first-child {
     order: 2;
     position: relative;
+    padding: 1rem 2rem 1rem 1rem;
   }
 
   /* Faire en sorte que le conteneur prenne 100% de la hauteur */
@@ -354,8 +356,33 @@ HERO SECTION */
   /* ABOUT SECTION */
   .about .grid {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
     align-items: stretch;
+  }
+
+  .about .container:last-child,
+  .about .container:last-child .image {
+    height: 100%;
+  }
+
+  .about .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about .grid .container:first-child {
+    order: 2;
+    text-align: left;
+    padding-left: 3rem;
+  }
+  .about .grid .container:first-child .text {
+    text-align: left;
+  }
+  .about .grid .container:last-child {
+    order: 1;
+    margin-right: 16rem;
   }
 
   /* GALLERIE MOBILE SECTION */
@@ -367,29 +394,40 @@ HERO SECTION */
   .gallerie img {
     height: 30rem;
   }
+  .gallery h2{
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+  .gallery .btn{
+    background: transparent;
+    color: var(--ivoire);
+    border: 1px solid var(--gold);
+    width:22rem;
+    margin-top: 10rem;
+  }
   /* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 0.5rem;
-}
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 0.5rem;
+  }
 
-.lightbox-close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-}
+  .lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+  }
 }
