@@ -85,9 +85,9 @@ p {
   font-weight: 400;
   color: var(--gold);
 }
---------------------------------
-  header
-  --------------------------------
+/* --------------------------------
+      START: HEADER MOBILE SECTION
+  -------------------------------- */
   header {
   border: 1px solid white;
   display: flex;
@@ -144,8 +144,13 @@ p {
   display: flex;
 }
 
-/* 
-HERO SECTION */
+/* --------------------------------
+      END: HEADER MOBILE SECTION
+  -------------------------------- */
+
+/* --------------------------------
+      START: HERO MOBILE SECTION
+  -------------------------------- */
 
 .hero .grid {
   display: flex;
@@ -169,6 +174,10 @@ HERO SECTION */
 .hero .text {
   color: var(--ivoire);
   font-size: 2.6rem;
+  margin-top: 1rem;
+}
+.hero h1{
+  margin-top: 1rem;
 }
 
 /* Aside images en mobile */
@@ -177,6 +186,9 @@ HERO SECTION */
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+
 }
 
 .hero aside .image {
@@ -184,12 +196,19 @@ HERO SECTION */
 }
 
 .hero aside img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+ aspect-ratio: 1 / 1;
   display: block;
+  object-fit: cover;
+  border-radius: .5rem;
 }
 
-/* ABOUT SECTION */
+/* --------------------------------
+      END: HERO MOBILE SECTION
+  -------------------------------- */
+/* --------------------------------
+      START: ABOUT MOBILE SECTION
+  -------------------------------- */
 .about {
   /* border: 1px solid red; */
   display: flex;
@@ -219,7 +238,13 @@ HERO SECTION */
   width: 100%;
   object-fit: cover;
 }
-/* SECTION INTERSECTION */
+
+/* --------------------------------
+      END: ABOUT  MOBILE SECTION
+  -------------------------------- */
+/* --------------------------------
+      START: INTERSECTION MOBILE SECTION
+  -------------------------------- */
 
 .intersection {
   background-color: var(--vert-mousse);
@@ -257,7 +282,16 @@ HERO SECTION */
   padding: 1rem;
 }
 
+
+/* --------------------------------
+      MEDIAQUERIES DESKTOP
+  -------------------------------- */
+
 @media only screen and (min-width: 1024px) {
+
+  /* --------------------------------
+      START: HEADER DESKTOP SECTION
+  -------------------------------- */
   header {
     justify-content: center;
     align-items: center;
@@ -296,6 +330,12 @@ HERO SECTION */
   .menu-toggle {
     display: none;
   }
+    /* --------------------------------
+      END: HEADER DESKTOP SECTION
+  -------------------------------- */
+    /* --------------------------------
+      START: HERO DESKTOP SECTION
+  -------------------------------- */
   /* HERO DESKTOP SECTION */
   .hero .grid {
     display: grid;
@@ -312,7 +352,7 @@ HERO SECTION */
     padding: 1rem 2rem 1rem 1rem;
   }
 
-  /* Faire en sorte que le conteneur prenne 100% de la hauteur */
+
   .hero .container:first-child,
   .hero .container:first-child .image {
     height: 100%;
@@ -320,7 +360,7 @@ HERO SECTION */
 
   .hero .hero-image {
     width: 100%;
-    height: 100%; /* maintenant ça fonctionne */
+    height: 100%; 
     object-fit: cover;
     display: block;
   }
@@ -331,7 +371,7 @@ HERO SECTION */
     text-align: left;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+  
   }
 
   .hero .container:last-child .text-container {
@@ -347,12 +387,18 @@ HERO SECTION */
     flex-wrap: wrap;
   }
 
-  /* Taille fixe des images d'aside */
+
   .hero aside img {
     width: 220px;
     height: 220px;
     object-fit: cover;
   }
+    /* --------------------------------
+      END: HERO DESKTOP SECTION
+  -------------------------------- */
+    /* --------------------------------
+      START: ABOUT DESKTOP SECTION
+  -------------------------------- */
   /* ABOUT SECTION */
   .about .grid {
     display: grid;
@@ -384,8 +430,14 @@ HERO SECTION */
     order: 1;
     margin-right: 16rem;
   }
+    /* --------------------------------
+      END: ABOUT DESKTOP SECTION
+  -------------------------------- */
+    /* --------------------------------
+      START: GALLERY DESKTOP SECTION
+  -------------------------------- */
 
-  /* GALLERIE MOBILE SECTION */
+
 
   .gallerie {
     grid-template-columns: repeat(4, 1fr);
@@ -394,15 +446,15 @@ HERO SECTION */
   .gallerie img {
     height: 30rem;
   }
-  .gallery h2{
+  .gallery h2 {
     text-align: left;
     margin-bottom: 4rem;
   }
-  .gallery .btn{
+  .gallery .btn {
     background: transparent;
     color: var(--ivoire);
     border: 1px solid var(--gold);
-    width:22rem;
+    width: 22rem;
     margin-top: 10rem;
   }
   /* Lightbox */
@@ -430,4 +482,12 @@ HERO SECTION */
     color: white;
     cursor: pointer;
   }
+
+
+    /* --------------------------------
+      END: GALLERY DESKTOP SECTION
+  -------------------------------- */
+    /* --------------------------------
+      START: HEADER DESKTOP SECTION
+  -------------------------------- */
 }
