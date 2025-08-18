@@ -45,9 +45,13 @@ a {
   font-size: 2.6rem;
   color: var(--ivoire);
   font-weight: 500;
+  cursor: pointer;
 }
 li {
   list-style-type: none;
+   font-family: "Cormorant Garamond", serif;
+   color: var(--ivoire);
+   font-size: 2.6rem;
 }
 p {
   font-family: "Cormorant Garamond", serif;
@@ -85,7 +89,7 @@ textarea {
 }
 .title-4 {
   font-family: "CINZEL";
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 400;
   color: var(--gold);
 }
@@ -379,6 +383,59 @@ header {
   min-height: 120px;
 }
 
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--nuit);
+  color: var(--ivoire);
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+footer > div{
+  margin-top: 4rem;
+}
+footer h4 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+  gap: 0.5rem;
+}
+
+footer ul li {
+  font-size: 2.6rem;
+
+}
+
+footer ul li a {
+  color: var(--ivoire);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: var(--vert-mousse);
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid var(--argent);
+  margin: 2rem 0 1rem;
+}
+
+footer p {
+
+  color: var(--argent);
+  text-align: center;
+
+}
+
 /* --------------------------------
       MEDIAQUERIES DESKTOP
   -------------------------------- */
@@ -579,7 +636,7 @@ header {
   /* --------------------------------
       START: CONTACT DESKTOP SECTION
   -------------------------------- */
-  .contact{
+  .contact {
     margin-top: 10rem;
   }
   .contact .grid {
@@ -588,15 +645,35 @@ header {
     gap: 3rem;
   }
   .contact .container:first-child {
-
     align-items: flex-start;
   }
   .contact .container > div {
     align-items: center;
     flex-direction: row;
-
   }
   .contact .container > div ion-icon {
     margin-right: 2rem;
+  }
+
+
+    footer {
+    padding: 3rem 2rem;
+  }
+
+  footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  footer hr,
+  footer p {
+    grid-column: 1 / -1; /* occupe toute la largeur */
   }
 }
