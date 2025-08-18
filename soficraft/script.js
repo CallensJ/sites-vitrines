@@ -44,3 +44,81 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+  gsap.registerPlugin(ScrollTrigger);
+
+  // HERO : Texte + Image principale
+  gsap.from(".hero .text-container", {
+    x: -50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top 80%",
+    }
+  });
+
+  gsap.from(".hero .hero-image", {
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top 80%",
+    }
+  });
+
+  // HERO : Aside images
+  gsap.from(".hero aside .image", {
+    y: 30,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".hero aside",
+      start: "top 85%",
+    }
+  });
+
+  // ABOUT : Texte + Image
+  gsap.from(".about .container:first-child", {
+    x: -50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 80%",
+    }
+  });
+
+  gsap.from(".about .about-image", {
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 80%",
+    }
+  });
+
+  // INTERSECTION
+  gsap.from(".intersection", {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".intersection",
+      start: "top 85%",
+    }
+  });
+
+  // GALLERY : Images avec effet stagger
+  gsap.from(".gallerie img", {
+    y: 50,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".gallery",
+      start: "top 85%",
+    }
+  });

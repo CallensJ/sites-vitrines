@@ -52,8 +52,12 @@ li {
 p {
   font-family: "Cormorant Garamond", serif;
   line-height: 4rem;
+  font-size: 2.6rem;
 }
-
+input,
+textarea {
+  font-family: "Cormorant Garamond", serif;
+}
 .btn-full {
   margin-top: 6rem;
   color: var(--nuit);
@@ -85,11 +89,22 @@ p {
   font-weight: 400;
   color: var(--gold);
 }
+/* Hover sur les images */
+.hero aside img,
+.gallery img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero aside img:hover,
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
 /* --------------------------------
       START: HEADER MOBILE SECTION
   -------------------------------- */
-  header {
-  border: 1px solid white;
+header {
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -176,7 +191,7 @@ p {
   font-size: 2.6rem;
   margin-top: 1rem;
 }
-.hero h1{
+.hero h1 {
   margin-top: 1rem;
 }
 
@@ -188,7 +203,6 @@ p {
   gap: 1rem;
   margin-top: 1rem;
   padding: 1rem;
-
 }
 
 .hero aside .image {
@@ -197,10 +211,10 @@ p {
 
 .hero aside img {
   width: 100%;
- aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
   display: block;
   object-fit: cover;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* --------------------------------
@@ -282,13 +296,94 @@ p {
   padding: 1rem;
 }
 
+/* --------------------------------
+      END: GALLERIE  MOBILE SECTION
+  -------------------------------- */
+/* --------------------------------
+      START: CONTACT MOBILE SECTION
+  -------------------------------- */
+/* ===== Contact Section ===== */
+.contact {
+  color: var(--ivoire);
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+.contact .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact h2.title-2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact .container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--ivoire);
+
+  padding: 1rem;
+}
+
+.contact .container > div ion-icon {
+  font-size: 2.6rem;
+  color: var(--gold);
+}
+
+/* ===== Form ===== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 2rem;
+  border: 1px solid var(--argent);
+  border-radius: 6px;
+  background-color: var(--nuit);
+  color: var(--ivoire);
+  font-size: 2.6rem;
+  margin: 1rem 0;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+.contact form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
 
 /* --------------------------------
       MEDIAQUERIES DESKTOP
   -------------------------------- */
 
 @media only screen and (min-width: 1024px) {
-
   /* --------------------------------
       START: HEADER DESKTOP SECTION
   -------------------------------- */
@@ -330,10 +425,10 @@ p {
   .menu-toggle {
     display: none;
   }
-    /* --------------------------------
+  /* --------------------------------
       END: HEADER DESKTOP SECTION
   -------------------------------- */
-    /* --------------------------------
+  /* --------------------------------
       START: HERO DESKTOP SECTION
   -------------------------------- */
   /* HERO DESKTOP SECTION */
@@ -352,7 +447,6 @@ p {
     padding: 1rem 2rem 1rem 1rem;
   }
 
-
   .hero .container:first-child,
   .hero .container:first-child .image {
     height: 100%;
@@ -360,7 +454,7 @@ p {
 
   .hero .hero-image {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
     display: block;
   }
@@ -371,7 +465,6 @@ p {
     text-align: left;
     display: flex;
     flex-direction: column;
-  
   }
 
   .hero .container:last-child .text-container {
@@ -387,16 +480,15 @@ p {
     flex-wrap: wrap;
   }
 
-
   .hero aside img {
     width: 220px;
     height: 220px;
     object-fit: cover;
   }
-    /* --------------------------------
+  /* --------------------------------
       END: HERO DESKTOP SECTION
   -------------------------------- */
-    /* --------------------------------
+  /* --------------------------------
       START: ABOUT DESKTOP SECTION
   -------------------------------- */
   /* ABOUT SECTION */
@@ -430,14 +522,12 @@ p {
     order: 1;
     margin-right: 16rem;
   }
-    /* --------------------------------
+  /* --------------------------------
       END: ABOUT DESKTOP SECTION
   -------------------------------- */
-    /* --------------------------------
+  /* --------------------------------
       START: GALLERY DESKTOP SECTION
   -------------------------------- */
-
-
 
   .gallerie {
     grid-template-columns: repeat(4, 1fr);
@@ -483,11 +573,30 @@ p {
     cursor: pointer;
   }
 
-
-    /* --------------------------------
+  /* --------------------------------
       END: GALLERY DESKTOP SECTION
   -------------------------------- */
-    /* --------------------------------
-      START: HEADER DESKTOP SECTION
+  /* --------------------------------
+      START: CONTACT DESKTOP SECTION
   -------------------------------- */
+  .contact{
+    margin-top: 10rem;
+  }
+  .contact .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .contact .container:first-child {
+
+    align-items: flex-start;
+  }
+  .contact .container > div {
+    align-items: center;
+    flex-direction: row;
+
+  }
+  .contact .container > div ion-icon {
+    margin-right: 2rem;
+  }
 }
