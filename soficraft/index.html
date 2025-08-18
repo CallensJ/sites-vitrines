@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <meta
+      name="description"
+      content="SofiCraft propose des bijoux artisanaux et féeriques, faits main avec passion. Découvrez des créations uniques qui allient magie, élégance et originalité."
+    />
+    <!-- Préconnect pour optimiser la vitesse -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Appel direct des polices -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.min.css" />
+        <!-- Microdata Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "SofiCraft",
+      "image": "https://soficraft.com/assets/headerImg.min.webp",
+      "url": "https://soficraft.com",
+      "description": "Bijoux artisanaux et féeriques faits main, uniques et inspirés par la magie et la poésie.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13 rue des artisans",
+        "addressLocality": "Lyon",
+        "postalCode": "69123",
+        "addressCountry": "FR"
+      },
+      "email": "contact@soficraft.fr"
+    }
+    </script>
 
     <title>soficraft</title>
   </head>
@@ -48,7 +78,7 @@
         <div class="container">
           <div class="image">
             <img
-              src="./assets/headerImg.webp"
+              src="./assets/headerImg.min.webp"
               alt="hero image"
               class="hero-image"
             />
@@ -65,15 +95,15 @@
           </div>
           <aside>
             <div class="image">
-              <img src="./assets/collier.jpg" />
+              <img src="./assets/collier.webp" alt="collier"/>
               <h4 class="title-4">Colliers</h4>
             </div>
             <div class="image">
-              <img src="./assets/pendentif.jpg" />
+              <img src="./assets/pendentif.webp" alt="pendentif"/>
               <h4 class="title-4">pendentifs</h4>
             </div>
             <div class="image">
-              <img src="./assets/bagues.jpg" />
+              <img src="./assets/bagues.webp" alt="bagues"/>
               <h4 class="title-4">Bagues</h4>
             </div>
           </aside>
@@ -102,7 +132,7 @@
         </div>
         <div class="container">
           <div class="image">
-            <img src="./assets/sophie.webp" class="about-image" />
+            <img src="./assets/sophie.webp" class="about-image" alt="sofie travaille dans son atelier"/>
           </div>
         </div>
       </div>
@@ -203,7 +233,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.min.js" defer></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
