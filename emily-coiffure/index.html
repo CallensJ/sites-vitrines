@@ -1,13 +1,312 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/src/style.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+      <link href="/src/style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <header class="flex">
+        <h2 class="logo cinzel-regular">
+          E<span class="cinzel-regular">mily's</span>
+        </h2>
+
+        <button
+          aria-controls="navbar"
+          aria-expanded="false"
+          class="btnToggle"
+        ></button>
+        <nav role="navigation" class="navbar">
+          <ul class="flex navbar__list" id="navbar" data-visible="false">
+            <li class="navbar__item">
+              <a href="#" class="navbar__link cinzel-regular">A PROPOS</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link cinzel-regular">BLOG</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link cinzel-regular">GALLERIE</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link cinzel-regular">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="hero-container">
+        <div class="content-bloc">
+          <div class="hero-titles-container">
+            <h1 class="font-cinzel text-4xl">
+              <span class="uppercase-letter">E</span>mily's
+            </h1>
+            <div class="hero-subtitles-container">
+              <p class="poppins-light-italic subtitle">The eyes of beauty</p>
+              <h2 class="cinzel-regular title-2">Salon de maquillage</h2>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="btn">Contacter</button>
+          </div>
+        </div>
+
+        <div class="illustration-bloc"></div>
+      </div>
+    </section>
+
+    <!-- SECTION INTERSECTION -->
+    <section id="intersection">
+      <p class="poppins-medium-italic">
+        "Découvrez l'art du maquillage subtil et sophistiqué qui révélera votre
+        beauté naturelle.
+      </p>
+      <p class="poppins-medium-italic">
+        Bienvenue dans notre univers où chaque trait est un coup de pinceau vers
+        la perfection."
+      </p>
+    </section>
+
+    <!-- SECTION ABOUT ME -->
+    <section id="about">
+      <h3 class="cinzel-regular title-3">A propos</h3>
+      <div class="wrapper">
+        <div class="content">
+          <img src="./img/about.jpg" alt="" class="me" />
+
+          <div class="text-container">
+            <p class="cinzel-regular title-2">Moi c'est Emily, 28ans</p>
+            <p class="poppins-medium about-me">
+              Ma passion estl'art du maquillage pour les yeux et et elle à
+              toujours été au cœur de ma vie.<br />
+              Mon salon est plus qu'un lieu de travail, c'est un espace où je
+              partage ma passion et où je fais en sorte que chaque personne se
+              sente belle et confiante [...]
+            </p>
+            <div class="btn-container">
+              <button class="btn about-btn">Lire plus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog">
+      <h3 class="cinzel-regular title-3">Mes articles</h3>
+      <div class="wrapper">
+        <div class="cards-container">
+          <!--blog card -->
+          <div class="card">
+            <div class="image-container">
+              <img src="./img/img1.jpg" alt="" class="blog-image" />
+            </div>
+            <div class="card-content">
+              <h2 class="cinzel-regular title-2 card-title">
+                Tips makeup pour les yeux clairs
+              </h2>
+              <p class="article poppins-regular">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum eu pulvinar augue, in facilisis nibh. Mauris faucibus
+                non nisi et rutrum. Sed vitae eleifend ligula, in interdum
+                ligula. Nam sagittis venenatis elit, eget ullamcorper lorem
+                dapibus ut
+              </p>
+              <h4 class="title-4 poppins-regular">
+                auteur(e):
+                <span class="article-author-name poppins-extralight-italic"
+                  >Emily</span
+                >
+              </h4>
+            </div>
+          </div>
+          <!--blog card -->
+          <div class="card">
+            <div class="image-container">
+              <img src="./img/img2.jpg" alt="" class="blog-image" />
+            </div>
+            <div class="card-content">
+              <h2 class="cinzel-regular title-2 card-title">
+                trop maquiller peut gâcher l'effet
+              </h2>
+              <p class="article poppins-regular">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum eu pulvinar augue, in facilisis nibh. Mauris faucibus
+                non nisi et rutrum. Sed vitae eleifend ligula, in interdum
+                ligula. Nam sagittis venenatis elit, eget ullamcorper lorem
+                dapibus ut
+              </p>
+              <h4 class="title-4 poppins-regular">
+                auteur(e):
+                <span class="article-author-name poppins-extralight-italic"
+                  >Emily</span
+                >
+              </h4>
+            </div>
+          </div>
+          <!--blog card -->
+          <div class="card">
+            <div class="image-container">
+              <img src="./img/img3.jpg" alt="" class="blog-image" />
+            </div>
+            <div class="card-content">
+              <h2 class="cinzel-regular title-2 card-title">
+                Privilégiez les contrastes et les nuances
+              </h2>
+
+              <p class="article poppins-regular">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum eu pulvinar augue, in facilisis nibh. Mauris faucibus
+                non nisi et rutrum. Sed vitae eleifend ligula, in interdum
+                ligula. Nam sagittis venenatis elit, eget ullamcorper lorem
+                dapibus ut
+              </p>
+              <h4 class="title-4 poppins-regular">
+                auteur(e):
+                <span class="article-author-name poppins-extralight-italic"
+                  >Emily</span
+                >
+              </h4>
+            </div>
+          </div>
+          <!--blog card -->
+          <div class="card">
+            <div class="image-container">
+              <img src="./img/img4.jpg" alt="" class="blog-image" />
+            </div>
+            <div class="card-content">
+              <h2 class="cinzel-regular title-2 card-title">
+                Comment entre vos yeux plus attrayants
+              </h2>
+              <p class="article poppins-regular">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum eu pulvinar augue, in facilisis nibh. Mauris faucibus
+                non nisi et rutrum. Sed vitae eleifend ligula, in interdum
+                ligula. Nam sagittis venenatis elit, eget ullamcorper lorem
+                dapibus ut
+              </p>
+              <h4 class="title-4 author-caption poppins-regular">
+                auteur(e):
+                <span class="article-author-name poppins-extralight-italic"
+                  >Emily</span
+                >
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+      <h3 class="cinzel-regular title-3">Ma Gallerie</h3>
+      <div class="wrapper">
+        <div class="flex images-container">
+          <img src="./img/img4.jpg" class="image" />
+
+          <img src="./img/img6.jpg" class="image" />
+          <img src="./img/img5.jpg" class="image" />
+          <img src="./img/img7.jpg" class="image" />
+          <img src="./img/img8.jpg" class="image" />
+          <img src="./img/img9.jpg" class="image" />
+          <img src="./img/img10.jpg" class="image" />
+          <img src="./img/img11.jpg" class="image" />
+          <img src="./img/img12.jpg" class="image" />
+          <img src="./img/img13.jpg" class="image" />
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-gallery">Voir plus</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h3 class="cinzel-regular title-3">Contact</h3>
+      <div class="wrapper">
+        <div class="contact-content">
+          <div class="contact-options">
+            <p>
+              EMAIL:
+              <span class="contact-email poppins-extralight-italic"
+                >monadressemail@gmail.com</span
+              >
+            </p>
+            <p>
+              TELEPHONE:<span class="contact-phone poppins-extralight-italic"
+                >+337 23 45 67 89</span
+              >
+            </p>
+
+            <div class="social-contact">
+              <p>SOCIAL MEDIAS:</p>
+              <img src="./img/instagram.svg" class="icon" />
+              <img src="./img/twitter.svg" class="icon" />
+              <img src="./img/square-facebook.svg" class="icon" />
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p class="cinzel-regular title-2">
+              Prendre un rendez vous? ou simplement une question?
+            </p>
+            <p class="poppins-medium paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              elementum posuere felis sit amet pretium. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="navbar-container">
+        <nav role="navigation" class="footer-navbar">
+          <div class="f-navbar-bloc-1">
+            <ul class="f-navbar__list">
+              <li class="footer-navbar__item">
+                <a href="#" class="f-navbar__link cinzel-regular">Home</a>
+              </li>
+              <li class="f-navbar__item">
+                <a href="#" class="f-navbar__link cinzel-regular">A propos</a>
+              </li>
+              <li class="f-navbar__item">
+                <a href="#" class="f-navbar__link cinzel-regular">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <h2 class="logo cinzel-regular">
+            E<span class="cinzel-regular">mily's</span>
+          </h2>
+          <div class="f-navbar-bloc-2">
+            <ul class="f-navbar__list">
+              <li class="f-navbar__item">
+                <a href="#" class="f-navbar__link cinzel-regular">Gallerie</a>
+              </li>
+              <li class="f-navbar__item">
+                <a href="#" class="f-navbar__link cinzel-regular">Contact</a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="border-bottom"></div>
+      </div>
+      <div class="copyright">
+        2024 @Webcraft_solutions all rights reserved
+      </div>
+    </footer>
+  </body>
 </html>
