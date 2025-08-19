@@ -9,3 +9,10 @@
 }
 
 
+@theme {
+  --color-*: initial;
+      --color-beige: #d1ad8f;
+      --color-dark: #1f282a;
+      --color-light:#f3f2f0;
+      --color-grayish: #e2dede;
+}
