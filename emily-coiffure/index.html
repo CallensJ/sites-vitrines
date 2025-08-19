@@ -51,7 +51,9 @@
             <a href="#gallery" class="hover:text-accent font-light">Galerie</a>
           </li>
           <li>
-            <a href="#contact" class="hover:text-accent font-light">Contact</a>
+            <a href="#contact" class="hover:text-accent font-light inline-flex items-center gap-2 rounded-xl px-6 py-3 shadow-lg
+        cursor-pointer bg-beige text-dark 
+         hover:bg-dark hover:text-light transition">Contact</a>
           </li>
         </ul>
       </nav>
@@ -79,7 +81,8 @@
         </h1>
         <p class="text-lg mb-4 italic md:mb-8">Salon de maquillage</p>
         <button
-          class="cursor-pointer flex items-center gap-2 bg-accent text-stone-800 px-6 py-3 rounded-xl shadow-lg hover:bg-accent/80 transition"
+          class="cursor-pointer flex items-center gap-2 bg-accent text-stone-800 px-6 py-3 rounded-xl shadow-lg  bg-beige text-dark font-semibold 
+         hover:bg-dark hover:text-light transition"
         >
           <ion-icon name="logo-whatsapp" class="text-2xl"></ion-icon>
           Contacter
@@ -225,7 +228,7 @@
     </section>
 
     <!-- Galerie -->
-    <section id="gallery" class="py-20 px-10 bg-stone-50">
+    <section id="gallery" class="py-20 px-10 bg-stone-50 bg-beige">
       <h2
         class="text-3xl md:text-4xl font-cinzel mb-10 text-center text-accent"
       >
@@ -316,29 +319,94 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-12">
-      <h2 class="text-3xl font-cinzel mb-4">Contactez-moi</h2>
-      <p class="mb-6">
-        Pour prendre rendez-vous ou poser une question, n'hésitez pas à me
-        contacter :
+<section id="contact" class="py-20 px-10 bg-stone-50">
+  <h2 class="text-3xl md:text-4xl font-cinzel mb-10 text-center text-accent">
+    Contactez-moi
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-12">
+    <!-- Infos de contact -->
+    <div>
+      <p class="mb-6 text-lg">
+        Pour prendre rendez-vous ou poser une question, n'hésitez pas à me contacter :
       </p>
-      <ul>
-        <li>
-          Email:
-          <a
-            href="mailto:monadressemail@gmail.com"
-            class="text-accent hover:underline"
-            >monadressemail@gmail.com</a
-          >
+
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3">
+          <ion-icon name="mail-outline" class="text-2xl text-accent"></ion-icon>
+          <a href="mailto:monadressemail@gmail.com" class="text-accent hover:underline">
+            monadressemail@gmail.com
+          </a>
         </li>
-        <li>
-          Téléphone:
-          <a href="tel:+33723456789" class="text-accent hover:underline"
-            >+33 7 23 45 67 89</a
-          >
+        <li class="flex items-center gap-3">
+          <ion-icon name="call-outline" class="text-2xl text-accent"></ion-icon>
+          <a href="tel:+33723456789" class="text-accent hover:underline">
+            +33 7 23 45 67 89
+          </a>
         </li>
       </ul>
-    </section>
+
+      <h3 class="mt-8 mb-4 text-xl font-semibold">Sur les réseaux</h3>
+      <div class="flex gap-6">
+        <a href="#" class="text-3xl inline-flex items-center gap-2 rounded-xl px-6 py-3 shadow-lg
+         bg-beige text-dark
+         hover:bg-dark hover:text-light
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beige
+         transition">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#" class="text-3xl inline-flex items-center gap-2 rounded-xl px-6 py-3 shadow-lg
+         bg-beige text-dark
+         hover:bg-dark hover:text-light
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beige
+         transition">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#" class="text-3xl inline-flex items-center gap-2 rounded-xl px-6 py-3 shadow-lg
+         bg-beige text-dark
+         hover:bg-dark hover:text-light
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beige
+         transition">
+          <ion-icon name="logo-pinterest"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div>
+      <form class="space-y-4">
+        <input
+          type="text"
+          placeholder="Nom"
+          class="w-full  p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-accent focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full  p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-accent focus:outline-none"
+        />
+        <input
+          type="tel"
+          placeholder="Téléphone"
+          class="w-full  p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-accent focus:outline-none"
+        />
+        <textarea
+          placeholder="Votre message"
+          rows="5"
+          class="w-full p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-accent focus:outline-none"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full cursor-pointer bg-beige text-dark font-semibold py-3 rounded-lg shadow-lg 
+         hover:bg-dark hover:text-light transition"
+        >
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     <footer class="py-6 bg-dark text-light text-center">
       <p>&copy; 2024 Webcraft Solutions. Tous droits réservés.</p>
