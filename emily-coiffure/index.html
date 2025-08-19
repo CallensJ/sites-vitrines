@@ -104,17 +104,31 @@
       </p>
     </section>
     <!-- À propos -->
-    <section id="about" class="py-12">
-      <h2 class="text-3xl font-cinzel mb-4">À propos de moi</h2>
-      <p class="mb-6">
+<section id="about" class="py-20 px-10 bg-stone-50">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Texte -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-cinzel mb-6 text-accent">
+        À propos de moi
+      </h2>
+      <p class="text-lg leading-relaxed text-stone-700">
         Moi c'est Emily, 28 ans. Ma passion est l'art du maquillage pour les
         yeux et elle a toujours été au cœur de ma vie. Mon salon est plus qu'un
         lieu de travail, c'est un espace où je partage ma passion et où je fais
         en sorte que chaque personne se sente belle et confiante.
       </p>
-      <a href="#blog" class="text-accent hover:underline">Lire plus</a>
-    </section>
+    </div>
 
+    <!-- Image -->
+    <div class="flex justify-center">
+      <img
+        src="./public/about.jpg"
+        alt="about-me-image"
+        class="rounded-2xl shadow-lg w-full max-h-[600px] object-cover"
+      />
+    </div>
+  </div>
+</section>
     <!-- Blog -->
     <section id="blog" class="py-12">
       <h2 class="text-3xl font-cinzel mb-4">Mes articles</h2>
