@@ -1,13 +1,13 @@
 const btn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
-let open = false;
 
 btn.addEventListener('click', () => {
-  open = !open;
-  menu.classList.toggle('hidden');
+  const isOpen = menu.classList.toggle('hidden') === false; // si 'hidden' vient d'être retiré
+  menu.classList.toggle('flex', isOpen); // crucial: flex en mobile quand ouvert
 
-  // changer l'icône
-  btn.innerHTML = open 
+  // accessibilité + icône
+  btn.setAttribute('aria-expanded', String(isOpen));
+  btn.innerHTML = isOpen
     ? '<ion-icon name="close-outline" class="text-3xl"></ion-icon>'
     : '<ion-icon name="menu-outline" class="text-3xl"></ion-icon>';
 });
